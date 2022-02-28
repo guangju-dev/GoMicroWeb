@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package register;
+
+option go_package = "./proto;register";
+
+service Register {
+	rpc SendSms(Request) returns (Response) {}
+	rpc Register(RegReq) returns (RegResponse) {}
+	rpc Login(LoginReq) returns (LoginResponse) {}
+}
+
+message Request {
+	string phone = 1;
+	string imgCode = 2;
+	string uuid = 3;
+}
+
+message Response {
+	string errno = 1;
+	string errmsg = 2;
+}
+
+message RegReq {
+	string mobile = 1;
+	string password = 2;
+	string sms_code = 3;
+}
+
+
+message RegResponse {
+	string errno = 1;
+	string errmsg = 2;
+	string name = 3;
+}
+message LoginReq {
+	string mobile = 1;
+	string password = 2;
+}
+message LoginResponse {
+	string name = 1;
+	string errno = 2;
+	string errmsg = 3;
+}
