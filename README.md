@@ -1,4 +1,4 @@
-# Micro_Web
+# MicroWeb
 一个Go Micro的项目，用到的技术栈挺多的
 golang + docker + consul + grpc + protobuf + gin + mysql + redis + fastDFS + nginx
 # 2.20~3.1 使用Go-Mirco v3 + Go 1.17重置项目(以其中的User微服务为例)
